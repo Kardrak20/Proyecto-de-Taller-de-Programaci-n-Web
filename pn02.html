@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PN-02 - Gestión de Encomiendas</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+<header>
+    <h1>PN-02: Gestión de Encomiendas</h1>
+    <p>Empresa de Transportes</p>
+</header>
+
+<main class="detalle">
+
+    <a href="index.html" class="volver">← Volver al inicio</a>
+
+    <section class="card">
+        <h2>Objetivo</h2>
+        <p>
+            Permitir registrar y controlar las encomiendas enviadas mediante
+            la empresa, así como permitir que el cliente consulte su estado.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Entrada</h2>
+
+        <ul>
+            <li>Datos del remitente</li>
+            <li>Datos del destinatario</li>
+            <li>Datos de la encomienda</li>
+            <li>Destino</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>Descripción del proceso</h2>
+
+        <ol>
+            <li>El remitente entrega la encomienda en la oficina.</li>
+            <li>El vendedor registra la encomienda en el sistema.</li>
+            <li>Se registran los datos del remitente y destinatario.</li>
+            <li>El sistema genera un código de seguimiento.</li>
+            <li>La encomienda es asignada a un viaje.</li>
+            <li>El cliente puede consultar el estado de la encomienda mediante su código.</li>
+        </ol>
+    </section>
+
+    <section class="card">
+        <h2>Salida</h2>
+
+        <ul>
+            <li>Encomienda registrada</li>
+            <li>Código de seguimiento</li>
+            <li>Estado de la encomienda actualizado</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>Actores</h2>
+
+        <div class="actores">
+            <span>Cliente</span>
+            <span>Vendedor</span>
+            <span>Administrador</span>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Reglas de Negocio</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Regla</th>
+                    <th>¿Por qué es una regla de negocio?</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Toda encomienda debe registrar los datos del remitente y del destinatario.</td>
+                    <td>Permite identificar a las personas responsables del envío y recepción.</td>
+                </tr>
+
+                <tr>
+                    <td>Toda encomienda registrada debe generar un código de seguimiento único.</td>
+                    <td>Permite identificar y consultar el estado de cada encomienda sin confundirla con otras.</td>
+                </tr>
+
+                <tr>
+                    <td>Una encomienda solo puede ser asignada a un viaje cuyo destino sea compatible con el destino registrado.</td>
+                    <td>Evita que la encomienda sea enviada por una ruta incorrecta.</td>
+                </tr>
+
+                <tr>
+                    <td>El estado de la encomienda debe actualizarse durante las diferentes etapas del envío.</td>
+                    <td>Permite que el cliente conozca la situación actual de su encomienda.</td>
+                </tr>
+
+                <tr>
+                    <td>No se puede entregar una encomienda si no puede identificarse correctamente mediante su código de seguimiento.</td>
+                    <td>Reduce errores en la entrega y permite verificar que se está entregando la encomienda correcta.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</main>
+
+<footer>
+    <p>Empresa de Transportes</p>
+</footer>
+
+</body>
+</html>
