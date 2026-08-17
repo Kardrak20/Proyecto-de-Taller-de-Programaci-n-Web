@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PN-01 - Gestión de Pasajes</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+<header>
+    <h1>PN-01: Gestión de Pasajes y Embarque</h1>
+    <p>Empresa de Transportes</p>
+</header>
+
+<main class="detalle">
+
+    <a href="index.html" class="volver">← Volver al inicio</a>
+
+    <section class="card">
+        <h2>Objetivo</h2>
+        <p>
+            Permitir que los clientes puedan comprar pasajes online y que
+            los vendedores puedan realizar la venta de boletos y verificación
+            de identidad antes del embarque.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Entrada</h2>
+
+        <ul>
+            <li>Datos del cliente</li>
+            <li>Destino</li>
+            <li>Fecha del viaje</li>
+            <li>Viaje seleccionado</li>
+            <li>Asiento seleccionado</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>Descripción del proceso</h2>
+
+        <ol>
+            <li>El cliente consulta los destinos y horarios disponibles.</li>
+            <li>Selecciona el viaje.</li>
+            <li>El sistema muestra los asientos disponibles.</li>
+            <li>El cliente selecciona un asiento y registra sus datos.</li>
+            <li>El cliente realiza la compra online.</li>
+            <li>El sistema confirma la venta y genera el pasaje.</li>
+            <li>En caso de una venta presencial, el vendedor registra la venta en el sistema.</li>
+        </ol>
+    </section>
+
+    <section class="card">
+        <h2>Salida</h2>
+
+        <ul>
+            <li>Pasaje registrado</li>
+            <li>Asiento ocupado</li>
+            <li>Confirmación de compra</li>
+            <li>Historial de viaje actualizado</li>
+            <li>Información adicional para el viaje</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>Actores</h2>
+
+        <div class="actores">
+            <span>Cliente</span>
+            <span>Vendedor</span>
+            <span>Administrador</span>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Reglas de Negocio</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Regla</th>
+                    <th>¿Por qué es una regla de negocio?</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>No se puede vender un asiento que ya se encuentre ocupado.</td>
+                    <td>Evita que un mismo asiento sea vendido a dos clientes.</td>
+                </tr>
+
+                <tr>
+                    <td>Todo pasaje debe estar asociado a un viaje, fecha, asiento y cliente.</td>
+                    <td>Permite identificar correctamente cada venta y pasajero.</td>
+                </tr>
+
+                <tr>
+                    <td>El precio del pasaje debe corresponder a la tarifa establecida para la ruta seleccionada.</td>
+                    <td>Evita cobros incorrectos y garantiza el cumplimiento de las tarifas.</td>
+                </tr>
+
+                <tr>
+                    <td>Una vez confirmada la venta, el asiento debe cambiar automáticamente a estado "ocupado".</td>
+                    <td>Mantiene actualizada la disponibilidad de asientos.</td>
+                </tr>
+
+                <tr>
+                    <td>Un pasaje solo puede venderse para un viaje que se encuentre activo y disponible.</td>
+                    <td>Evita registrar ventas para viajes cancelados, suspendidos o no programados.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</main>
+
+<footer>
+    <p>Empresa de Transportes</p>
+</footer>
+
+</body>
+</html>
